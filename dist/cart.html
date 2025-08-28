@@ -10,7 +10,7 @@
 </head>
 <body class="bg-zinc-50 min-h-screen">
     <div class="flex flex-col md:flex-row min-h-screen">
-        <!-- Sidebar - Hidden on mobile, shown on md and up -->
+        
         <div class="hidden md:block w-48 h-full bg-[#FFFCF5] shadow-md fixed">
             <div class="p-4">
                 <div class="flex items-center mb-8">
@@ -34,7 +34,7 @@
             </div>
         </div>
 
-        <!-- Mobile Header -->
+        
         <div class="md:hidden bg-[#FFFCF5] shadow-sm p-4 flex items-center justify-between">
             <div class="flex items-center">
                 <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
@@ -47,7 +47,7 @@
             </button>
         </div>
 
-        <!-- Mobile Menu (Hidden by default) -->
+        
         <div id="mobileMenu" class="hidden md:hidden bg-[#FFFCF5] shadow-md">
             <div class="p-4 space-y-2">
                 <button class="w-full flex items-center px-3 py-2 bg-gray-100 rounded-lg">
@@ -65,9 +65,9 @@
             </div>
         </div>
 
-        <!-- Main Content -->
+        
         <div class="flex-1 md:ml-48 p-4 md:p-8">
-            <!-- Desktop Header -->
+            
             <div class="hidden md:flex justify-between items-center mb-8">
                 <h1 class="text-2xl font-bold text-teal-900">Cart</h1>
                 <div class="flex items-center space-x-4">
@@ -92,16 +92,16 @@
                 </div>
             </div>
 
-            <!-- Cart Content -->
+            
             <div class="flex flex-col lg:flex-row gap-10">
-                <!-- Cart Items -->
+                
                 <div class="flex-1">
                     <div class="hidden md:flex justify-between items-center mb-4 p-2 rounded">
                         <span class="text-gray-700 font-medium">Product</span>
                         <span class="text-gray-700 font-medium">Price</span>
                     </div>
                     
-                    <!-- Cart Item 1 -->
+                    
                     
                         <div class="flex flex-col bg-zinc-200 rounded-lg shadow-sm mb-4 sm:flex-row items-start sm:items-center mt-4">
                             <img class="w-20 h-20 object-cover rounded-md mr-4" src="/Cart assets/Rectangle.png" alt="Product">
@@ -163,9 +163,9 @@
                                 </button>
                             </div>
                         </div>
-                    
 
-                    <!-- Cart Buttons -->
+
+
                     <div class="flex flex-col sm:flex-row gap-4 mt-6">
                         <button class="w-full sm:w-112 px-6 py-2 bg-teal-900 hover:bg-teal-800 text-white rounded-md transition-colors">
                             Continue Shopping
@@ -176,7 +176,7 @@
                     </div>
                 </div>
 
-                <!-- Order Summary -->
+
                 <div class=" mt-14 lg:w-96">
                     <div class="bg-[#FFFCF5] rounded-lg shadow-sm p-6">
                         <h2 class="text-xl font-bold text-gray-800 mb-4">Your Cart</h2>
@@ -215,7 +215,7 @@
                 </div>
             </div>
 
-            <!-- Footer -->
+           
             <footer class="mt-34">
                 <div class="flex flex-col md:flex-row justify-between items-center">
                     <div class="text-center md:text-left mb-4 md:mb-0">
@@ -249,7 +249,7 @@
     </div>
 
     <script>
-        // Mobile menu toggle
+        
         document.addEventListener('DOMContentLoaded', function() {
             const mobileMenuButton = document.getElementById('mobileMenuButton');
             const mobileMenu = document.getElementById('mobileMenu');
