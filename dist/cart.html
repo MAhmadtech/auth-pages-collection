@@ -8,215 +8,258 @@
     <link href="/output.css" rel="stylesheet">
     <title>Cart</title>
 </head>
-<body>
-    <div>
-        <div>
-            
-            <div>
-                <div class="w-full h-[782px] relative bg-[#FFFCF5] overflow-hidden">
-                <div class="w-0 h-[786px] left-[192px] top-[786px] absolute origin-top-left rotate-180"></div>
-                <button class="w-48 h-10 left-0 top-[98px] absolute flex items-center px-5 py-2.5 bg-zinc-300 rounded-lg hover:bg-zinc-400">
-                    <div class="w-4 h-4 mr-4">
-                        <img src="/Cart assets/3d-square.svg" alt="Products" class="text-teal-900">
-                    </div>
-                    <span class="text-teal-900 text-xs font-medium font-['Inter']">Products</span>
-                </button>
-                <button class="w-48 h-10 left-0 top-[137.91px] absolute flex items-center px-5 py-2.5 hover:bg-gray-100 active:bg-gray-200 rounded-lg transition-colors duration-200">
-                    <div class="w-4 h-4 mr-4">
-                        <img src="/Cart assets/element-4.svg" alt="My Orders">
-                    </div>
-                    <span class="text-neutral-800 text-xs font-medium font-['Inter']">My Order</span>
-                </button>
-                <div class="w-4 h-4 left-[20px] top-[150px] absolute">
-                    <img src="/Cart assets/element-4.svg" alt="Star">
+<body class="bg-zinc-50 min-h-screen">
+    <div class="flex flex-col md:flex-row min-h-screen">
+        <!-- Sidebar - Hidden on mobile, shown on md and up -->
+        <div class="hidden md:block w-48 h-full bg-[#FFFCF5] shadow-md fixed">
+            <div class="p-4">
+                <div class="flex items-center mb-8">
+                    <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                    <span class="text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo Here</span>
                 </div>
-                <button class="w-48 h-10 left-0 top-[177.83px] absolute flex items-center px-5 py-2.5 hover:bg-gray-100 active:bg-gray-200 rounded-lg transition-colors duration-200">
-                    <div class="w-4 h-4 mr-4">
-                        <img src="/Cart assets/setting-2.svg" alt="Settings">
-                    </div>
-                    <span class="text-neutral-800 text-xs font-medium font-['Inter']">Settings</span>
+                <nav class="space-y-2">
+                    <button class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                        <img src="/Cart assets/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
+                        <span class="text-teal-900 text-sm font-medium">Products</span>
+                    </button>
+                    <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <img src="/Cart assets/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                        <span class="text-gray-800 text-sm font-medium">My Order</span>
+                    </button>
+                    <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <img src="/Cart assets/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
+                        <span class="text-gray-800 text-sm font-medium">Settings</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Mobile Header -->
+        <div class="md:hidden bg-[#FFFCF5] shadow-sm p-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                <span class="text-teal-900 text-lg font-bold">Cart</span>
+            </div>
+            <button id="mobileMenuButton" class="text-teal-900">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu (Hidden by default) -->
+        <div id="mobileMenu" class="hidden md:hidden bg-[#FFFCF5] shadow-md">
+            <div class="p-4 space-y-2">
+                <button class="w-full flex items-center px-3 py-2 bg-gray-100 rounded-lg">
+                    <img src="/Cart assets/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
+                    <span class="text-teal-900 text-sm font-medium">Products</span>
                 </button>
-                <div class="w-40 h-8 left-[18px] top-[24px] absolute overflow-hidden">
-                    <div class="w-7 h-7 left-0 top-[1.21px] absolute">
-                        <img src="/Cart assets/Logo (1).svg" alt="Logo">
+                <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg">
+                    <img src="/Cart assets/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                    <span class="text-gray-800 text-sm font-medium">My Order</span>
+                </button>
+                <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg">
+                    <img src="/Cart assets/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
+                    <span class="text-gray-800 text-sm font-medium">Settings</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 md:ml-48 p-4 md:p-8">
+            <!-- Desktop Header -->
+            <div class="hidden md:flex justify-between items-center mb-8">
+                <h1 class="text-2xl font-bold text-teal-900">Cart</h1>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Search..." class="pl-4 pr-10 py-2 bg-gray-100 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-teal-500 w-64">
+                        <svg class="w-4 h-4 absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                        </svg>
                     </div>
-                    
-                    <div class="left-[36.23px] top-[2px] absolute justify-start text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo Here</div>
+                    <button class="p-2 bg-gray-100 rounded-full hover:bg-gray-200 relative">
+                        <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path>
+                        </svg>
+                        <span class="absolute -top-1 -right-1 bg-red-500 text-white text-xs rounded-full w-4 h-4 flex items-center justify-center">3</span>
+                    </button>
+                    <div class="flex items-center space-x-2">
+                        <span class="text-sm font-medium">Andrew Forbist</span>
+                        <div class="w-8 h-8 rounded-full bg-gray-200 overflow-hidden">
+                            <img src="/Cart assets/Place image here.png" alt="Profile" class="w-full h-full object-cover">
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Cart Content -->
+            <div class="flex flex-col lg:flex-row gap-10">
+                <!-- Cart Items -->
+                <div class="flex-1">
+                    <div class="hidden md:flex justify-between items-center mb-4 p-2 rounded">
+                        <span class="text-gray-700 font-medium">Product</span>
+                        <span class="text-gray-700 font-medium">Price</span>
+                    </div>
                     
-                </div>
-                <div class="w-[1400px] h-[780px] left-[192px] top-0 absolute bg-neutral-50 rounded-tl-3xl rounded-bl-3xl overflow-hidden">
-                    <div class="w-[1192px] left-[28px] top-[22px] absolute inline-flex justify-between items-center">
-                        <div class="justify-start text-teal-900 text-2xl font-bold font-['Urbanist'] leading-loose">Cart</div>
-                        <div class="flex justify-start items-start gap-5">
-                            <div data-size="Large" class="w-72 px-4 py-2.5 bg-zinc-100 rounded-[20px] outline outline-1 outline-offset-[-1px] outline-zinc-100 flex justify-start items-center gap-1.5">
-                                <div class="relative flex-1 ">
-                                    <input type="text" placeholder="Search..." class="w-full bg-transparent border-none focus:ring-0 focus:outline-none text-neutral-500 text-xs font-normal font-['Urbanist'] leading-none">
-                                </div>
-                                <button type="submit" class="text-neutral-500 hover:text-teal-900 transition-colors">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+                    <!-- Cart Item 1 -->
+                    
+                        <div class="flex flex-col bg-zinc-200 rounded-lg shadow-sm mb-4 sm:flex-row items-start sm:items-center mt-4">
+                            <img class="w-20 h-20 object-cover rounded-md mr-4" src="/Cart assets/Rectangle.png" alt="Product">
+                            <div class="flex-1">
+                                <h3 class="text-gray-800 font-medium">The Conscious Machine</h3>
+                                <p class="text-sm text-gray-600">By: <span class="font-medium">Jane Cooper</span></p>
+                            </div>
+                            <div class="mt-4 sm:mt-0 flex items-center space-x-4">
+                                <span class="text-gray-800 font-medium">$150.58</span>
+                                <button class="text-gray-400 hover:text-teal-950">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                                     </svg>
                                 </button>
                             </div>
-                            <div class="flex justify-start items-start gap-2.5">
-                                <button class="p-2.5 relative bg-stone-100 hover:bg-stone-200 rounded-[20px] transition-colors duration-200">
-                                    <div class="relative">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-zinc-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
-                                        </svg>
-                                        <span class="absolute -top-1 -right-1 h-3 w-3 bg-red-500 rounded-full flex items-center justify-center">
-                                            <span class="text-white text-[8px] font-bold">3</span>
-                                        </span>
-                                    </div>
+                        </div>
+                        <div class="flex flex-col bg-zinc-200 rounded-lg shadow-sm  mb-4 sm:flex-row items-start sm:items-center mt-4">
+                            <img class="w-20 h-20 object-cover rounded-md mr-4" src="/Cart assets/Rectangle2.png" alt="Product">
+                            <div class="flex-1">
+                                <h3 class="text-gray-800 font-medium">The Conscious Machine</h3>
+                                <p class="text-sm text-gray-600">By: <span class="font-medium">Jane Cooper</span></p>
+                            </div>
+                            <div class="mt-4 sm:mt-0 flex items-center space-x-4">
+                                <span class="text-gray-800 font-medium">$150.58</span>
+                                <button class="text-gray-400 hover:text-teal-950">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
                                 </button>
                             </div>
-                            <div class="w-36 flex justify-end items-center gap-2.5">
-                                <div class="inline-flex flex-col justify-start items-end gap-0.5">
-                                    <div class="justify-start text-teal-900 text-sm font-bold font-['Urbanist'] leading-none">Andrew Forbist</div>
-                                </div>
-                                <div class="w-9 h-9 relative rounded-[56px] overflow-hidden">
-                                    <div data-size="Large" data-style="Photo" data-type="Circle" class="w-9 h-9 left-0 top-0 absolute rounded-[32px]">
-                                        <div class="w-9 h-9 left-0 top-0 absolute bg-lime-200 rounded-3xl overflow-hidden">
-                                            <img class="w-9 h-9 left-0 top-0 absolute" src="/Cart assets/Place image here.png" />
-                                        </div>
-                                    </div>
-                                </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row items-start sm:items-center mt-4">
+                            <img class="w-20 h-20 object-cover rounded-md mr-4" src="/Cart assets/Rectangle3.png" alt="Product">
+                            <div class="flex-1">
+                                <h3 class="text-gray-800 font-medium">The Conscious Machine</h3>
+                                <p class="text-sm text-gray-600">By: <span class="font-medium">Jane Cooper</span></p>
+                            </div>
+                            <div class="mt-4 sm:mt-0 flex items-center space-x-4">
+                                <span class="text-gray-800 font-medium">$150.58</span>
+                                <button class="text-gray-400 hover:text-teal-950">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
                             </div>
                         </div>
+                        <div class="flex flex-col bg-zinc-200 rounded-lg shadow-sm mb-4 sm:flex-row items-start sm:items-center mt-4">
+                            <img class="w-20 h-20 object-cover rounded-md mr-4" src="/Cart assets/Rectangle4.png" alt="Product">
+                            <div class="flex-1">
+                                <h3 class="text-gray-800 font-medium">The Conscious Machine</h3>
+                                <p class="text-sm text-gray-600">By: <span class="font-medium">Jane Cooper</span></p>
+                            </div>
+                            <div class="mt-4 sm:mt-0 flex items-center space-x-4">
+                                <span class="text-gray-800 font-medium">$150.58</span>
+                                <button class="text-gray-400 hover:text-teal-950">
+                                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    
+
+                    <!-- Cart Buttons -->
+                    <div class="flex flex-col sm:flex-row gap-4 mt-6">
+                        <button class="w-full sm:w-112 px-6 py-2 bg-teal-900 hover:bg-teal-800 text-white rounded-md transition-colors">
+                            Continue Shopping
+                        </button>
+                        <button class="w-full sm:w-112 px-6 py-2 border border-gray-300 hover:bg-gray-50 rounded-md transition-colors">
+                            Update Cart
+                        </button>
                     </div>
-                    <div data-version="Default" class="w-[1192px] h-6 left-[28px] top-[726px] absolute inline-flex justify-between items-center">
-                        <div class="flex-1 flex justify-start items-center gap-5">
-                            <div class="justify-start text-zinc-800 text-xs font-medium font-['Urbanist'] leading-none">Copyright 2025 book.com</div>
-                            <div class="flex justify-start items-start gap-4">
-                                <div class="justify-start text-stone-300 text-xs font-normal font-['Urbanist'] leading-none">Privacy Policy</div>
-                                <div class="justify-start text-stone-300 text-xs font-normal font-['Urbanist'] leading-none">Term and conditions</div>
-                                <div class="justify-start text-stone-300 text-xs font-normal font-['Urbanist'] leading-none">Contact</div>
+                </div>
+
+                <!-- Order Summary -->
+                <div class=" mt-14 lg:w-96">
+                    <div class="bg-[#FFFCF5] rounded-lg shadow-sm p-6">
+                        <h2 class="text-xl font-bold text-gray-800 mb-4">Your Cart</h2>
+                        <div class="space-y-4">
+                            <div class="flex justify-between">
+                                <span class="text-gray-600">Sub Total</span>
+                                <span class="font-medium">$1550.50</span>
                             </div>
-                        </div>
-                        <div class="flex justify-start items-start gap-3">
-                            <div class="w-6 h-6 relative">
-                                <img src="/Cart assets/FacebookLogo.svg" alt="Place image here" />
+                            <div class="flex justify-between items-center py-2 border-b border-gray-100">
+                                <span class="text-gray-600">Fee Shipping</span>
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                    </svg>
+                                </div>
                             </div>
-                            <div class="w-6 h-6 relative">
-                                <img src="/Cart assets/TwitterLogo.svg" alt="Place image here" />
-                            </div>
-                            <div class="w-6 h-6 relative">
-                                <img src="/Cart assets/InstagramLogo.svg" alt="Place image here" />
-                            </div>
-                            <div class="w-6 h-6 relative">
-                                <img src="/Cart assets/YoutubeLogo.svg" alt="Place image here" />
-                            </div>
-                            <div class="w-6 h-6 relative">
-                                <img src="/Cart assets/TwitterLogo.svg" alt="Place image here" />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-36 h-6 left-[42px] top-[2198px] absolute"></div>
-                    <div class="left-[34px] top-[110px] absolute justify-start text-neutral-700 text-base font-semibold font-['Urbanist'] leading-normal">Product</div>
-                    <div class="left-[561px] top-[110px] absolute justify-start text-black text-base font-normal font-['Urbanist'] leading-normal">Price</div>
-                    <div class="w-96 h-84 left-[814px] top-[149px] absolute bg-[#FFFCF5] rounded-[10px]">
-                        <div class="left-[20px] top-[20px] absolute justify-start text-teal-900 text-2xl font-bold font-['Urbanist'] leading-loose">Your Cart</div>
-                        <div class="left-[20px] top-[72px] absolute w-[calc(100%-40px)] h-px bg-gray-200"></div>
-                        <div class="left-[20px] top-[92px] absolute opacity-70 justify-start text-black text-sm font-normal font-['Urbanist']">Sub Total</div>
-                        <div class="right-[20px] top-[92px] absolute opacity-70 justify-end text-black text-sm font-bold font-['Urbanist']">$ 1550.50</div>
-                        
-                        <!-- Fee Shipping Dropdown -->
-                        <div class="left-[20px] top-[128px] absolute flex items-center justify-between w-[calc(100%-40px)]">
-                            <span class="opacity-70 text-black text-sm font-normal font-['Urbanist']">Fee Shipping</span>
-                            <div class="relative">
-                                <button class="flex items-center text-sm font-medium text-gray-700 focus:outline-none">
-                                    <span>Standard</span>
-                                    <svg class="w-4 h-4 ml-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <div class="flex justify-between items-center py-2">
+                                 <span class="text-gray-600">Apply Promo Code</span>
+                                <button class="text-teal-900 font-medium flex items-center">
+                                    <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
                                     </svg>
                                 </button>
                             </div>
-                        </div>
-
-                        <!-- Apply Promo Code Dropdown -->
-                        <div class="left-[20px] top-[164px] absolute flex items-center justify-between w-[calc(100%-40px)]">
-                            <span class="opacity-70 text-black text-sm font-normal font-['Urbanist']">Apply Promo Code</span>
-                            <div class="relative">
-                                <button class="flex items-center text-sm font-medium text-gray-700 focus:outline-none">
-                                    <span>Add Code</span>
-                                    <svg class="w-4 h-4 ml-1 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path>
-                                    </svg>
+                            <div class="pt-4 border-t border-gray-100">
+                                <div class="flex justify-between items-center mb-4">
+                                    <span class="font-medium">Total</span>
+                                    <span class="text-lg font-bold">$1550.50</span>
+                                </div>
+                                <button class="w-full py-3 bg-teal-900 hover:bg-teal-800 text-white font-medium rounded-md transition-colors">
+                                    Payment Process
                                 </button>
                             </div>
                         </div>
-
-                        <div class="left-[20px] top-[220px] absolute w-[calc(100%-40px)] h-px bg-gray-200"></div>
-                        <div class="left-[20px] top-[240px] absolute justify-start text-black text-base font-semibold font-['Urbanist']">Total</div>
-                        <div class="right-[20px] top-[240px] absolute justify-end text-black text-base font-bold font-['Urbanist']">$1550.50</div>
-                        <button class="absolute top-[275px] left-[20px] right-[20px] bottom-[20px] h-11 bg-teal-900 hover:bg-teal-800 active:bg-teal-900 rounded-[5px] flex items-center justify-center text-white text-sm font-medium font-['Poppins'] leading-normal transition-colors duration-200">
-                            Payment Process
-                        </button>
                     </div>
-                    <button class="w-90 h-11 px-6 py-2 left-[34px] top-[564px] absolute bg-teal-900 hover:bg-teal-800 active:bg-teal-900 rounded-[5px] outline outline-[0.80px] outline-offset-[-0.80px] outline-neutral-700/80 inline-flex items-center justify-center transition-colors duration-200">
-                        <span class="whitespace-nowrap text-white text-sm font-medium font-['Poppins'] leading-normal">Continue Shopping</span>
-                    </button>
-                    <button class="w-90 h-11 px-6 py-2 left-[422.87px] top-[564px] absolute rounded-[5px] outline outline-[0.80px] outline-offset-[-0.80px] outline-neutral-700/80 inline-flex items-center justify-center bg-white hover:bg-gray-50 active:bg-gray-100 transition-colors duration-200">
-                        <span class="whitespace-nowrap text-teal-900 text-sm font-medium font-['Poppins'] leading-none">Update Cart</span>
-                    </button>
-                    <div class="w-[746px] h-20 left-[34px] top-[149px] absolute opacity-20 bg-zinc-300 rounded-md"></div>
-                    <img class="w-20 h-20 left-[34px] top-[149px] absolute rounded-tl-md rounded-bl-md" src="/Cart assets/Rectangle.png" />
-                    <div class="left-[134px] top-[167px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Conscious Machine</div>
-                    <div class="left-[134px] top-[197px] absolute inline-flex justify-start items-center gap-[5px]">
-                        <div class="opacity-70 justify-start text-neutral-700 text-sm font-normal font-['Urbanist'] leading-none">By:</div>
-                        <div class="justify-start text-neutral-700 text-sm font-semibold font-['Urbanist'] leading-none">Jane Cooper</div>
-                    </div>
-                    <div class="left-[561px] top-[179px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">$ 150.58</div>
-                    <button class="w-6 h-6 left-[735px] top-[179px] absolute flex items-center justify-center text-gray-500 hover:text-gray-700 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <div class="w-[746px] h-20 left-[34px] top-[249px] absolute opacity-0 bg-zinc-300 rounded-md"></div>
-                    <img class="w-20 h-20 left-[34px] top-[249px] absolute rounded-tl-md rounded-bl-md" src="/Cart assets/Rectangle2.png" />
-                    <div class="left-[134px] top-[267px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Conscious Machine</div>
-                    <div class="left-[134px] top-[297px] absolute inline-flex justify-start items-center gap-[5px]">
-                        <div class="opacity-70 justify-start text-neutral-700 text-sm font-normal font-['Urbanist'] leading-none">By:</div>
-                        <div class="justify-start text-neutral-700 text-sm font-semibold font-['Urbanist'] leading-none">Jane Cooper</div>
-                    </div>
-                    <div class="left-[561px] top-[279px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">$ 150.58</div>
-                    <button class="w-6 h-6 left-[735px] top-[279px] absolute flex items-center justify-center text-gray-500 hover:text-gray-700 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <div class="w-[746px] h-20 left-[34px] top-[349px] absolute opacity-20 bg-zinc-300 rounded-md"></div>
-                    <img class="w-20 h-20 left-[34px] top-[349px] absolute rounded-tl-md rounded-bl-md" src="/Cart assets/Rectangle3.png" />
-                    <div class="left-[134px] top-[367px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Conscious Machine</div>
-                    <div class="left-[134px] top-[397px] absolute inline-flex justify-start items-center gap-[5px]">
-                        <div class="opacity-70 justify-start text-neutral-700 text-sm font-normal font-['Urbanist'] leading-none">By:</div>
-                        <div class="justify-start text-neutral-700 text-sm font-semibold font-['Urbanist'] leading-none">Jane Cooper</div>
-                    </div>
-                    <div class="left-[561px] top-[379px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">$ 150.58</div>
-                    <button class="w-6 h-6 left-[735px] top-[379px] absolute flex items-center justify-center text-gray-500 hover:text-gray-700 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
-                    <div class="w-[746px] h-20 left-[34px] top-[449px] absolute opacity-20 bg-zinc-300 rounded-md"></div>
-                    <img class="w-20 h-20 left-[34px] top-[449px] absolute rounded-tl-md rounded-bl-md" src="/Cart assets/Rectangle4.png" />
-                    <div class="left-[134px] top-[467px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Conscious Machine</div>
-                    <div class="left-[134px] top-[497px] absolute inline-flex justify-start items-center gap-[5px]">
-                        <div class="opacity-70 justify-start text-neutral-700 text-sm font-normal font-['Urbanist'] leading-none">By:</div>
-                        <div class="justify-start text-neutral-700 text-sm font-semibold font-['Urbanist'] leading-none">Jane Cooper</div>
-                    </div>
-                    <div class="left-[561px] top-[479px] absolute justify-start text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">$ 150.58</div>
-                    <button class="w-6 h-6 left-[735px] top-[479px] absolute flex items-center justify-center text-gray-500 hover:text-gray-700 focus:outline-none">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                        </svg>
-                    </button>
                 </div>
             </div>
-            
+
+            <!-- Footer -->
+            <footer class="mt-34">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <div class="text-center md:text-left mb-4 md:mb-0">
+                        <p class="text-sm text-gray-600">Copyright © 2025 book.com</p>
+                    </div>
+                    <div class="flex flex-wrap justify-center gap-4 mb-4 md:mb-0">
+                        <a href="#" class="text-sm text-gray-600 hover:text-teal-900">Privacy Policy</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-teal-900">Terms and Conditions</a>
+                        <a href="#" class="text-sm text-gray-600 hover:text-teal-900">Contact</a>
+                    </div>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-teal-900">
+                            <img src="/Cart assets/FacebookLogo.svg" alt="Facebook" class="w-5 h-5">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-teal-900">
+                            <img src="/Cart assets/TwitterLogo.svg" alt="Twitter" class="w-5 h-5">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-teal-900">
+                            <img src="/Cart assets/InstagramLogo.svg" alt="Instagram" class="w-5 h-5">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-teal-900">
+                            <img src="/Cart assets/YoutubeLogo.svg" alt="YouTube" class="w-5 h-5">
+                        </a>
+                        <a href="#" class="text-gray-500 hover:text-teal-900">
+                            <img src="/Cart assets/TwitterLogo.svg" alt="Twitter" class="w-5 h-5">
+                        </a>
+                    </div>
+                </div>
+            </footer>
         </div>
     </div>
+
+    <script>
+        // Mobile menu toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuButton = document.getElementById('mobileMenuButton');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (mobileMenuButton && mobileMenu) {
+                mobileMenuButton.addEventListener('click', function() {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
