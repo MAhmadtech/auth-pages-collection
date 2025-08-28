@@ -904,6 +904,10 @@ video {
   height: 580px;
 }
 
+.h-\[715px\] {
+  height: 715px;
+}
+
 .min-h-\[calc\(100vh-1\.5rem\)\] {
   min-height: calc(100vh - 1.5rem);
 }
