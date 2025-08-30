@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="/output.css" rel="stylesheet">
+    <title>01. Dashboard (v1) - Desktop</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div class="hidden md:block w-48 h-full bg-[#FFFCF5] shadow-md fixed">
+                <div class="p-4">
+                    <div class="flex items-center mb-8">
+                        <img src="/Buyer Dashboard images/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                        <span class="text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo Here</span>
+                    </div>
+                    <nav class="space-y-2">
+                        <button
+                            class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                            <img src="/Buyer Dashboard images/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
+                            <span class="text-teal-900 text-sm font-medium">Products</span>
+                        </button>
+                        <button
+                            class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                            <img src="/Buyer Dashboard images/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                            <span class="text-gray-800 text-sm font-medium">My Order</span>
+                        </button>
+                        <button
+                            class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                            <img src="/Buyer Dashboard images/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
+                            <span class="text-gray-800 text-sm font-medium">Settings</span>
+                        </button>
+                    </nav>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div
+                        class=" ml-48 w-[1380px] h-[1100px] relative bg-neutral-50 rounded-tl-3xl rounded-bl-3xl overflow-hidden">
+                        <div
+                            class="w-[1340px] left-[28px] top-[22px] absolute inline-flex justify-between items-center">
+                            <div
+                                class="justify-start text-teal-900 text-xl font-bold font-['Urbanist'] leading-relaxed">
+                                Dashboard</div>
+                            <div class="flex justify-start items-start gap-5">
+                                <div class="relative w-72">
+                                    <div class="relative">
+                                        <input type="text" placeholder="Search..."
+                                            class="w-full pl-4 pr-10 py-2.5 bg-zinc-100 rounded-[20px] outline-none text-sm text-neutral-700 placeholder-neutral-500 focus:ring-2 focus:ring-teal-900/20 focus:bg-white transition-all">
+                                        <div class="absolute right-3 top-1/2 transform -translate-y-1/2">
+                                            <svg class="w-4 h-4 text-teal-900" fill="none" stroke="currentColor"
+                                                viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="p-0.5 bg-stone-100 rounded-[20px] inline-flex justify-start items-start gap-2">
+                                    <button
+                                        class="relative p-2.5 bg-stone-100 rounded-full hover:bg-stone-200 transition-colors">
+                                        <svg class="w-4 h-4 text-zinc-800" fill="none" viewBox="0 0 24 24"
+                                            stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z" />
+                                        </svg>
+                                        <!-- Cart count badge -->
+                                        <span
+                                            class="absolute -top-1 -right-1 w-5 h-5 flex items-center justify-center text-xs font-medium text-white bg-red-500 rounded-full">0</span>
+                                    </button>
+                                </div>
+
+
+                                <button
+                                    class="relative p-2.5 bg-stone-100 rounded-full hover:bg-stone-200 transition-colors">
+
+                                    <svg class="w-5 h-5 text-zinc-800" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                                        </path>
+                                    </svg>
+
+                                    <span class="absolute top-1.5 right-1.5 w-2 h-2 bg-red-500 rounded-full"></span>
+                                </button>
+                                <div class="w-36 flex justify-end items-center gap-2.5">
+                                    <div class="inline-flex flex-col justify-start items-end gap-0.5">
+                                        <div
+                                            class="justify-start text-teal-900 text-sm font-bold font-['Urbanist'] leading-none">
+                                            Andrew Forbist</div>
+                                    </div>
+                                    <div class="w-9 h-9 relative rounded-[56px] overflow-hidden">
+                                        <div data-size="Large" data-style="Photo" data-type="Circle"
+                                            class="w-9 h-9 left-0 top-0 absolute rounded-[32px]">
+                                            <div
+                                                class="w-9 h-9 left-0 top-0 absolute bg-lime-200 rounded-3xl overflow-hidden">
+                                                <img class="w-9 h-9 left-0 top-0 absolute"
+                                                    src="/Buyer Dashboard images/Place image.png" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        
+                        <div class="relative w-48">
+                            <button
+                                class="w-full h-10 px-4 py-2 ml-8 mt-24 flex items-center justify-between rounded-md border border-gray-200 bg-zinc hover:bg-gray-50 transition-colors">
+                                <div class="flex items-center gap-2">
+                                    <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                    <span class="text-sm font-medium text-gray-700">Category</span>
+                                </div>
+
+                                <svg class="w-4 h-4 text-gray-500" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+
+                            
+
+
+                        </div>
+                        <div class="flex gap-8 flex-wrap">
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 1.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Conscious Machine</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Jhon Smith</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 3.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Quantum Brain </div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Robert Fox</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 2.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">Deep Learning Unlocked</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Wade Warren</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 4.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">AI In The 21st Century</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Guy Hawkins</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Buyer Dashboard images/image 2.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">The Algorithmic Revolution</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Jane Cooper</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 6.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">Building The Next AI</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Robert Fox</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 7.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">Exploring The AI Universe</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Jerome Bell</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="w-72 h-80 ml-8 mt-12 bg-white rounded-[10px] shadow-[0px_3px_11px_0px_rgba(0,0,0,0.07)]">
+                                <div class="w-full h-44 relative">
+                                    <img class="w-full h-full object-cover rounded-t-[10px]" src="/Dashboard(1)/image 8.png" />
+                                </div>
+                                <div class="p-4">
+                                    <div class="text-neutral-700 text-lg font-bold font-['Urbanist'] leading-tight">Decoding The Machine Mind</div>
+                                    <div class="w-full h-px my-2 opacity-30 bg-black"></div>
+                                    <div class="flex justify-between items-center">
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm font-normal">By:</span>
+                                            <span class="text-neutral-700 text-sm font-semibold">Floyd Miles</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <span class="opacity-70 text-neutral-700 text-sm">4.5</span>
+                                            <div class="flex items-center">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                                <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="mt-4 flex items-center gap-3">
+                                        <button class="flex-1 h-10 rounded-[5px] border border-neutral-700/80 text-neutral-700 text-sm font-normal font-['Poppins'] hover:bg-gray-50 transition-colors">
+                                            View Detail
+                                        </button>
+                                        <button class="w-12 h-10 flex items-center justify-center rounded-[5px] border border-neutral-700/80 hover:bg-gray-50 transition-colors">
+                                            <svg class="w-5 h-5 text-neutral-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    </div>
+                    <div data-version="Default" class="w-[1330px] h-6 left-[230px] top-[1050px] absolute inline-flex justify-between items-center">
+                        <div class="flex-1 flex justify-start items-center gap-5">
+                            <div class="justify-start text-zinc-800 text-xs font-medium font-['Urbanist'] leading-none">Copyright © 2025 book.com</div>
+                            <div class="flex justify-start items-start gap-4">
+                                <div class="justify-start text-stone-300 text-xs font-normal font-['Urbanist'] leading-none">Privacy Policy</div>
+                                <div class="justify-start text-stone-300 text-xs font-normal font-['Urbanist'] leading-none">Term and conditions</div>
+                                <div class="justify-start text-stone-300 text-xs font-normal font-['Urbanist'] leading-none">Contact</div>
+                            </div>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-500 hover:text-teal-900">
+                                <img src="/Buyer Dashboard images/FacebookLogo.svg" alt="Facebook" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-teal-900">
+                                <img src="/Buyer Dashboard images/TwitterLogo.svg" alt="Twitter" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-teal-900">
+                                <img src="/Buyer Dashboard images/InstagramLogo.svg" alt="Instagram" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-teal-900">
+                                <img src="/Buyer Dashboard images/YoutubeLogo.svg" alt="YouTube" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-500 hover:text-teal-900">
+                                <img src="/Buyer Dashboard images/TwitterLogo.svg" alt="Twitter" class="w-5 h-5">
+                            </a>
+                        </div>
+                    </div>
+                    
+                </div>
+</body>
+
+</html>
