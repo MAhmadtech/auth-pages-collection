@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="/src/tailwind-config.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+</head>
+<body class="font-urbanist bg-background-main text-primary min-h-screen">
+
+  <section id="settings-page">
+    <div class="flex flex-col md:flex-row min-h-screen w-full bg-background-main">
+
+      <!-- Sidebar -->
+      <aside class="sidebar hidden md:block w-48 h-screen fixed left-0 top-0 bg-background-main shadow-md flex flex-col p-4">
+        <div class="flex items-center mb-8">
+          <img src="/assets/logo.svg" alt="logo-icon" class="w-7 h-7 mr-2">
+          <span class="font-inter font-bold text-lg text-primary uppercase">Logo Here</span>
+        </div>
+        <nav class="space-y-2">
+          <a href="#" class="flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+            <img src="/assets/products.svg" alt="Products Icon" class="w-4 h-4 mr-3">
+            <span class="text-sm font-medium text-primary">Products</span>
+          </a>
+          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+            <img src="/assets/my order.svg" alt="My Order Icon" class="w-4 h-4 mr-3">
+            <span class="text-sm font-medium text-gray-800">My Order</span>
+          </a>
+          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+            <img src="/assets/setting.svg" alt="Setting Icon" class="w-4 h-4 mr-3">
+            <span class="text-sm font-medium text-gray-800">Setting</span>
+          </a>
+        </nav>
+      </aside>
+
+      <!-- Mobile Header -->
+      <div class="md:hidden bg-background-main shadow-sm p-3 md:p-4 flex items-center justify-between sticky top-0 z-40">
+        <div class="flex items-center">
+          <img src="/assets/logo.svg" alt="logo-icon" class="w-7 h-7 mr-2">
+          <span class="font-inter font-bold text-lg text-primary">Logo</span>
+        </div>
+        <button id="mobileMenuButton" class="text-primary p-2 rounded-lg hover:bg-gray-100 transition-colors">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <!-- Mobile Menu Overlay -->
+      <div id="mobileMenuOverlay" class="hidden md:hidden fixed inset-0 bg-black bg-opacity-50 z-50 transition-opacity duration-300"></div>
+      
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="hidden md:hidden fixed top-0 left-0 h-full w-80 max-w-[85vw] bg-background-main shadow-xl z-50 transform -translate-x-full transition-transform duration-300">
+        <div class="p-4 md:p-6">
+          <div class="flex items-center justify-between mb-6 md:mb-8">
+            <div class="flex items-center">
+              <img src="/assets/logo.svg" alt="logo-icon" class="w-7 h-7 mr-2">
+              <span class="font-inter font-bold text-lg text-primary">Logo</span>
+            </div>
+            <button id="mobileMenuClose" class="text-primary p-2 rounded-lg hover:bg-gray-100 transition-colors">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-2 md:space-y-3">
+            <a href="#" class="flex items-center px-4 py-3 bg-gray-200 rounded-lg text-primary">
+              <img src="/assets/products.svg" alt="Products Icon" class="w-5 h-5 mr-3">
+              <span class="text-base font-medium">Products</span>
+            </a>
+            <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors">
+              <img src="/assets/my order.svg" alt="My Order Icon" class="w-5 h-5 mr-3">
+              <span class="text-base font-medium text-gray-800">My Order</span>
+            </a>
+            <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors">
+              <img src="/assets/setting.svg" alt="Setting Icon" class="w-5 h-5 mr-3">
+              <span class="text-base font-medium text-gray-800">Setting</span>
+            </a>
+          </nav>
+        </div>
+      </div>
+
+      <!-- Main Content -->
+      <main class="flex-1 flex flex-col bg-[#FBFBFC] min-h-screen md:ml-48">
+        <div class="flex-1 flex flex-col p-3 md:p-6 lg:p-8 overflow-hidden">
+          <header class="flex-none">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 md:gap-4 mb-3 md:mb-6">
+              <h1 class="font-urbanist font-bold text-xl md:text-2xl">Setting</h1>
+              <div class="flex items-center gap-2 md:gap-3 w-full lg:w-auto">
+                <!-- Search Bar (Left) -->
+                <div class="flex items-center gap-2 bg-gray-100 rounded-full py-2 px-4 flex-1 lg:flex-none lg:w-64 min-w-0">
+                  <input type="text" placeholder="Search placeholder" 
+                         class="w-full text-sm placeholder:text-gray-400 focus:outline-none bg-transparent">
+                  <img src="/assets/icon-magnifying-glass.svg" alt="Search" class="w-4 h-4 flex-shrink-0">
+                </div>
+                
+                <!-- Notification Icon -->
+                <button class="relative bg-background-light-green rounded-full w-9 h-9 flex justify-center items-center hover:bg-opacity-80 transition-colors flex-shrink-0">
+                  <img src="/assets/icon-bell.svg" alt="Notifications" class="w-4 h-4">
+                  <span class="absolute top-1 right-1 w-2 h-2 bg-danger rounded-full border border-background-light-green"></span>
+                </button>
+                
+                <!-- User Name -->
+                <span class="font-medium text-sm text-primary hidden lg:block">Andrew Forbist</span>
+                
+                <!-- Profile Picture (Right) -->
+                <img src="/assets/profile_pic.png" alt="Profile" class="w-8 h-8 rounded-full object-cover flex-shrink-0">
+              </div>
+            </div>
+
+            <!-- Profile Header -->
+            <div class="flex flex-col sm:flex-row items-center gap-2 md:gap-4 mb-3 md:mb-6 mt-4 md:mt-8">
+              <div class="relative w-12 h-12 sm:w-20 sm:h-20">
+                <img src="/assets/ellipse-190.svg" alt="User Avatar" class="w-full h-full">
+                <div class="absolute right-0 bottom-0 w-4 h-4 sm:w-6 sm:h-6 flex justify-center items-center">
+                  <img src="/assets/ellipse-191.svg" alt="Camera bg" class="w-full h-full">
+                  <img src="/assets/frame.svg" alt="Camera" class="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 absolute">
+                </div>
+              </div>
+              <div class="text-center sm:text-left">
+                <p class="text-sm sm:text-lg font-bold">Andrew Forbist</p>
+                <p class="text-[10px] sm:text-sm text-gray-600">Last Update 12-15-2024</p>
+              </div>
+            </div>
+          </header>
+
+          <!-- Settings Form -->
+          <form class="flex-1 flex flex-col space-y-4 md:space-y-6 mt-2 md:mt-4">
+            <div class="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-2 gap-3 md:gap-6">
+              <div class="flex flex-col space-y-2 md:space-y-3">
+                <label for="full-name" class="text-xs md:text-sm font-medium text-gray-700">Full Name :</label>
+                <input type="text" id="full-name" placeholder="Full Name" 
+                       class="bg-gray-100 rounded-lg px-0 md:px-4 py-0 md:py-3 text-xs md:text-sm text-primary placeholder:text-gray-400 h-8 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-colors">
+              </div>
+              <div class="flex flex-col space-y-2 md:space-y-3">
+                <label for="email" class="text-xs md:text-sm font-medium text-gray-700">Email :</label>
+                <input type="email" id="email" placeholder="Email" 
+                       class="bg-gray-100 rounded-lg px-0 md:px-4 py-0 md:py-3 text-xs md:text-sm text-primary placeholder:text-gray-400 h-8 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-colors">
+              </div>
+              <div class="flex flex-col space-y-2 md:space-y-3">
+                <label for="user-role" class="text-xs md:text-sm font-medium text-gray-700">User Role :</label>
+                <input type="text" id="user-role" placeholder="User Role" 
+                       class="bg-gray-100 rounded-lg px-0 md:px-4 py-0 md:py-3 text-xs md:text-sm text-primary placeholder:text-gray-400 h-8 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-colors">
+              </div>
+              <div class="flex flex-col space-y-2 md:space-y-3">
+                <label for="mobile" class="text-xs md:text-sm font-medium text-gray-700">Mobile :</label>
+                <input type="tel" id="mobile" placeholder="Mobile" 
+                       inputmode="numeric" pattern="[0-9, +]*"
+                       class="bg-gray-100 rounded-lg px-0 md:px-4 py-0 md:py-3 text-xs md:text-sm text-primary placeholder:text-gray-400 h-8 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary focus:bg-white transition-colors">
+              </div>
+            </div>
+
+            <hr class="my-3 md:my-6 border-t-2 border-gray-200">
+
+            <!-- Passwords -->
+            <!-- Passwords -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-6">
+              <div class="flex flex-col w-full space-y-2 md:space-y-3">
+                <label for="current-password" class="text-xs md:text-sm font-medium text-gray-700">Current Password</label>
+                <input type="password" id="current-password" placeholder="Current Password" 
+                      class="bg-zinc-100 rounded-lg px-3 md:px-4 py-2 md:py-3 text-sm md:text-base text-primary placeholder:text-gray-500 placeholder:text-sm md:placeholder:text-base h-10 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary ">
+              </div>
+              <div class="flex flex-col space-y-2 md:space-y-3">
+                <label for="new-password" class="text-xs md:text-sm font-medium text-gray-700">New Password</label>
+                <input type="password" id="new-password" placeholder="New Password"
+                      class="bg-zinc-100 rounded-lg px-3 md:px-4 py-2 md:py-3 text-sm md:text-base text-primary placeholder:text-gray-500 placeholder:text-sm md:placeholder:text-base h-10 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary ">
+              </div>
+              <div class="flex flex-col space-y-3 md:col-span-2 lg:col-span-1 xl:col-span-1">
+                <label for="confirm-password" class="text-xs md:text-sm font-medium text-gray-700">Confirm Password</label>
+                <input type="password" id="confirm-password" placeholder="Confirm Password"
+                      class="bg-zinc-100 rounded-lg px-3 md:px-4 py-2 md:py-3 text-sm md:text-base text-primary placeholder:text-gray-500 placeholder:text-sm md:placeholder:text-base h-10 md:h-12 focus:outline-none focus:ring-2 focus:ring-primary ">
+              </div>
+            </div>
+
+            <!-- Actions -->
+            <div class="mt-6 md:mt-8 pt-2 md:pt-4">
+              <div class="flex flex-col sm:flex-row justify-end gap-3 md:gap-4">
+                <button type="button" class="w-full sm:w-[248px] py-2 md:py-3 px-6 md:px-8 text-xs md:text-sm rounded-lg border border-primary text-primary font-medium hover:bg-gray-50 transition-colors h-10 md:h-12 min-h-[40px] md:min-h-[48px]">
+                  Cancel
+                </button>
+                <button type="submit" class="w-full sm:w-[248px] py-2 md:py-3 px-6 md:px-8 text-xs md:text-sm rounded-lg bg-[#1E4841] text-white font-medium hover:bg-[#173731] transition-colors h-10 md:h-12 min-h-[40px] md:min-h-[48px]">
+                  Save
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+
+       
+            
+            <!-- Desktop: Original layout -->
+            <div class=" sm:flex lg:flex-row flex-col justify-between items-center gap-1 md:gap-2">
+            <div class=" text-gray-600 order-2 ml-1 text-center lg:order-1">
+                <p>Copyright 2025 book.com</p>
+              </div>
+              <div class="flex flex-wrap justify-center gap-2 md:gap-4 order-1 lg:order-2">
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">Privacy Policy</a>
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">Terms</a>
+                <a href="#" class="text-gray-600 hover:text-primary transition-colors">Contact</a>
+              </div>
+              <div class="flex justify-center sm:justify-start space-x-2 md:space-x-3 order-3 mr-2">
+                <a href="#" class="hover:opacity-80 transition-opacity p-1"><img src="/assets/facebook-logo.svg" alt="Facebook" class="w-4 h-4"></a>
+                <a href="#" class="hover:opacity-80 transition-opacity p-1"><img src="/assets/twitter-logo.svg" alt="Twitter" class="w-4 h-4"></a>
+                <a href="#" class="hover:opacity-80 transition-opacity p-1"><img src="/assets/instagram-logo.svg" alt="Instagram" class="w-4 h-4"></a>
+                <a href="#" class="hover:opacity-80 transition-opacity p-1"><img src="/assets/youtube-logo.svg" alt="YouTube" class="w-4 h-4"></a>
+                <a href="#" class="hover:opacity-80 transition-opacity p-1"><img src="/assets/linkedin-logo.svg" alt="LinkedIn" class="w-4 h-4"></a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </main>
+    </div>
+  </section>
+
+  <script>
+    // Enhanced Mobile Menu
+    document.addEventListener('DOMContentLoaded', function() {
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const mobileMenuClose = document.getElementById('mobileMenuClose');
+      const mobileMenu = document.getElementById('mobileMenu');
+      const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+      
+      function openMobileMenu() {
+        mobileMenu.classList.remove('hidden', '-translate-x-full');
+        mobileMenuOverlay.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      
+      function closeMobileMenu() {
+        mobileMenu.classList.add('-translate-x-full');
+        mobileMenuOverlay.classList.add('hidden');
+        document.body.style.overflow = '';
+        setTimeout(() => {
+          if (mobileMenu.classList.contains('-translate-x-full')) {
+            mobileMenu.classList.add('hidden');
+          }
+        }, 300);
+      }
+      
+      if (mobileMenuButton) {
+        mobileMenuButton.addEventListener('click', openMobileMenu);
+      }
+      
+      if (mobileMenuClose) {
+        mobileMenuClose.addEventListener('click', closeMobileMenu);
+      }
+      
+      if (mobileMenuOverlay) {
+        mobileMenuOverlay.addEventListener('click', closeMobileMenu);
+      }
+      
+      // Close menu on escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && !mobileMenu.classList.contains('hidden')) {
+          closeMobileMenu();
+        }
+      });
+      
+      // Handle window resize
+      window.addEventListener('resize', function() {
+        if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
+          closeMobileMenu();
+        }
+      });
+    });
+  </script>
+</body>
+</html>
