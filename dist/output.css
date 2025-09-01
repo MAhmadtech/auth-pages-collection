@@ -870,6 +870,10 @@ video {
   margin-left: 0.75rem;
 }
 
+.ml-48 {
+  margin-left: 12rem;
+}
+
 .block {
   display: block;
 }

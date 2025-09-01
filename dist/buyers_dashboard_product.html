@@ -161,40 +161,6 @@
                         <span class="opacity-50">Share:</span>
                         <span>Copy link</span>
                     </div>
-
-                    <!-- Special Offer -->
-                    <div class="mb-8">
-                        <div class="text-neutral-700 font-semibold mb-3">Special Offer:</div>
-                        <div class="flex items-center gap-3">
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 bg-zinc-100 rounded flex items-center justify-center">
-                                    <span id="countdown-days" class="text-teal-900 text-sm font-medium">10</span>
-                                </div>
-                                <span class="text-neutral-700 text-xs opacity-70 mt-1">Day</span>
-                            </div>
-                            <span class="text-neutral-700">:</span>
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 bg-zinc-100 rounded flex items-center justify-center">
-                                    <span id="countdown-hours" class="text-teal-900 text-sm font-medium">10</span>
-                                </div>
-                                <span class="text-neutral-700 text-xs opacity-70 mt-1">Hours</span>
-                            </div>
-                            <span class="text-neutral-700">:</span>
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 bg-zinc-100 rounded flex items-center justify-center">
-                                    <span id="countdown-minutes" class="text-teal-900 text-sm font-medium">00</span>
-                                </div>
-                                <span class="text-neutral-700 text-xs opacity-70 mt-1">Min</span>
-                            </div>
-                            <span class="text-neutral-700">:</span>
-                            <div class="flex flex-col items-center">
-                                <div class="w-10 h-10 bg-zinc-100 rounded flex items-center justify-center">
-                                    <span id="countdown-seconds" class="text-teal-900 text-sm font-medium">00</span>
-                                </div>
-                                <span class="text-neutral-700 text-xs opacity-70 mt-1">Sec</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
             </div>
 
@@ -410,39 +376,6 @@
             menuButton.addEventListener('click', toggleMenu);
             overlay.addEventListener('click', toggleMenu);
         }
-
-        // Countdown timer
-        const countDownDate = new Date();
-        countDownDate.setDate(countDownDate.getDate() + 10);
-        countDownDate.setHours(countDownDate.getHours() + 10);
-        countDownDate.setMinutes(0);
-        countDownDate.setSeconds(8);
-
-        const countdown = setInterval(function() {
-            const now = new Date().getTime();
-            const distance = countDownDate - now;
-            
-            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-            
-            const daysElement = document.getElementById('countdown-days');
-            const hoursElement = document.getElementById('countdown-hours');
-            const minutesElement = document.getElementById('countdown-minutes');
-            const secondsElement = document.getElementById('countdown-seconds');
-            
-            if (daysElement) daysElement.textContent = days.toString().padStart(2, '0');
-            if (hoursElement) hoursElement.textContent = hours.toString().padStart(2, '0');
-            if (minutesElement) minutesElement.textContent = minutes.toString().padStart(2, '0');
-            if (secondsElement) secondsElement.textContent = seconds.toString().padStart(2, '0');
-            
-            if (distance < 0) {
-                clearInterval(countdown);
-                const container = document.querySelector('.countdown-container');
-                if (container) container.innerHTML = 'Offer Expired';
-            }
-        }, 1000);
     </script>
 </body>
 </html>
