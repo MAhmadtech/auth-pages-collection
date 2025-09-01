@@ -704,6 +704,18 @@ video {
   order: 3;
 }
 
+.col-span-1 {
+  grid-column: span 1 / span 1;
+}
+
+.col-span-2 {
+  grid-column: span 2 / span 2;
+}
+
+.col-span-3 {
+  grid-column: span 3 / span 3;
+}
+
 .mx-1 {
   margin-left: 0.25rem;
   margin-right: 0.25rem;
@@ -836,6 +848,14 @@ video {
 
 .mt-\[-65px\] {
   margin-top: -65px;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.ml-3 {
+  margin-left: 0.75rem;
 }
 
 .block {
@@ -1070,6 +1090,10 @@ video {
   width: 18rem;
 }
 
+.w-\[11\.25rem\] {
+  width: 11.25rem;
+}
+
 .min-w-0 {
   min-width: 0px;
 }
@@ -1088,6 +1112,18 @@ video {
 
 .max-w-sm {
   max-width: 24rem;
+}
+
+.max-w-6xl {
+  max-width: 72rem;
+}
+
+.max-w-4xl {
+  max-width: 56rem;
+}
+
+.max-w-xl {
+  max-width: 36rem;
 }
 
 .flex-1 {
@@ -1141,6 +1177,10 @@ video {
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .flex-col {
@@ -1243,6 +1283,12 @@ video {
   --tw-space-y-reverse: 0;
   margin-top: calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
+}
+
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
 .overflow-hidden {
@@ -1440,6 +1486,11 @@ video {
   background-color: ;
 }
 
+.bg-zinc-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(161 161 170 / var(--tw-bg-opacity, 1));
+}
+
 .bg-opacity-50 {
   --tw-bg-opacity: 0.5;
 }
@@ -1603,6 +1654,10 @@ video {
 
 .text-center {
   text-align: center;
+}
+
+.text-right {
+  text-align: right;
 }
 
 .font-\[\'Inter\'\] {
@@ -2298,6 +2353,10 @@ video {
     margin-top: 2rem;
   }
 
+  .md\:ml-\[11\.25rem\] {
+    margin-left: 11.25rem;
+  }
+
   .md\:block {
     display: block;
   }
@@ -2308,6 +2367,10 @@ video {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:grid {
+    display: grid;
   }
 
   .md\:hidden {
@@ -2349,6 +2412,10 @@ video {
 
   .md\:grid-cols-3 {
     grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .md\:grid-cols-12 {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
   }
 
   .md\:flex-row {
@@ -2460,6 +2527,12 @@ video {
   .md\:placeholder\:text-base::placeholder {
     font-size: 1rem;
     line-height: 1.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    .md\:lg\:ml-64 {
+      margin-left: 16rem;
+    }
   }
 }
 
