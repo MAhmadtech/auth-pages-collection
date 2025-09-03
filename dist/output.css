@@ -1937,6 +1937,11 @@ video {
   background-color: rgb(17 94 89 / var(--tw-bg-opacity, 1));
 }
 
+.hover\:bg-zinc-100:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(244 244 245 / var(--tw-bg-opacity, 1));
+}
+
 .hover\:bg-opacity-80:hover {
   --tw-bg-opacity: 0.8;
 }
