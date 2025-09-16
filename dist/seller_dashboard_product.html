@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link href="/output.css" rel="stylesheet">
-    <title>Buyer Dashboard</title>
+    <title>Seller Dashboard</title>
     <style>
         @media (max-width: 768px) {
             .sidebar {
@@ -58,6 +58,10 @@
                 <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
                     <img src="/Buyer Dashboard images/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
                     <span class="text-gray-800 text-sm font-medium">My Order</span>
+                </button>
+                <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <img src="/Buyer Dashboard images/headphone.svg" alt="Support" class="w-4 h-4 mr-3">
+                    <span class="text-gray-800 text-sm font-medium">AI Support</span>
                 </button>
                 <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
                     <img src="/Buyer Dashboard images/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
@@ -208,142 +212,9 @@
             </div>
 
             <!-- Recently Viewed Section -->
-            <div class="mt-16">
-                <h2 class="text-2xl font-bold text-teal-900 mb-6">Recently Viewed</h2>
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                    <!-- Product Card 1 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <div class="h-40 bg-gray-100">
-                            <img src="/Buyer Dashboard images/image 2.png" alt="Product" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-lg text-neutral-700 mb-2">The Algorithmic Revolution</h3>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-3">
-                                <span>By: <span class="font-semibold">Jane Cooper</span></span>
-                                <div class="flex items-center">
-                                    <span class="mr-1 flex">4.5</span>
-                                    <div class="flex">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-2">
-                                <button class="flex-1 py-2 px-3 bg-white border border-gray-300 rounded text-sm font-medium hover:bg-gray-50">
-                                    View Details
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50">
-                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 2 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <div class="h-40 bg-gray-100">
-                            <img src="/Buyer Dashboard images/image 3.png" alt="Product" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-lg text-neutral-700 mb-2">Building The Next AI</h3>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-3">
-                                <span>By: <span class="font-semibold">Robert Fox</span></span>
-                                <div class="flex items-center">
-                                    <span class="mr-1 flex">4.5</span>
-                                    <div class="flex">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-2">
-                                <button class="flex-1 py-2 px-3 bg-white border border-gray-300 rounded text-sm font-medium hover:bg-gray-50">
-                                    View Details
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50">
-                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 3 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <div class="h-40 bg-gray-100">
-                            <img src="/Buyer Dashboard images/image 4.png" alt="Product" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-lg text-neutral-700 mb-2">Exploring The AI Universe</h3>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-3">
-                                <span>By: <span class="font-semibold">Jerome Bell</span></span>
-                                <div class="flex items-center">
-                                    <span class="mr-1 flex">4.5</span>
-                                    <div class="flex">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-2">
-                                <button class="flex-1 py-2 px-3 bg-white border border-gray-300 rounded text-sm font-medium hover:bg-gray-50">
-                                    View Details
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50">
-                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Product Card 4 -->
-                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
-                        <div class="h-40 bg-gray-100">
-                            <img src="/Buyer Dashboard images/image 1.png" alt="Product" class="w-full h-full object-cover">
-                        </div>
-                        <div class="p-4">
-                            <h3 class="font-bold text-lg text-neutral-700 mb-2">Decoding The Machine Mind</h3>
-                            <div class="flex items-center justify-between text-sm text-gray-600 mb-3">
-                                <span>By: <span class="font-semibold">Floyd Miles</span></span>
-                                <div class="flex items-center">
-                                    <span class="mr-1 flex">4.5</span>
-                                    <div class="flex">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="flex gap-2">
-                                <button class="flex-1 py-2 px-3 bg-white border border-gray-300 rounded text-sm font-medium hover:bg-gray-50">
-                                    View Details
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50">
-                                    <svg class="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z"/>
-                                    </svg>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- <div class="mt-16">
+                
+            </div> -->
         </div>
 
         <!-- Footer -->
