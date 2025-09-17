@@ -118,12 +118,20 @@
                     <header class="flex-none mt-2 ml-4">
                         <div class="flex items-center justify-between mb-4 sm:mb-6">
                             <div class="flex items-center">
-                                
                                 <h1 class="font-urbanist font-bold text-lg sm:text-xl md:text-2xl">AI Support</h1>
                             </div>
-                            <!-- Profile Picture - Hidden on mobile -->
-                            <div class="hidden sm:block">
-                                <img src="/assets/profile_pic.png" alt="Profile" class="w-8 h-8 rounded-full object-cover">
+                            <div class="flex items-center gap-2">
+                                <!-- Mobile menu button - visible on small screens, placed on the right -->
+                                <button id="sidebarToggle" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
+                                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M4 6h16M4 12h16M4 18h16"></path>
+                                    </svg>
+                                </button>
+                                <!-- Profile Picture - Hidden on mobile -->
+                                <div class="hidden sm:block">
+                                    <img src="/assets/profile_pic.png" alt="Profile" class="w-8 h-8 rounded-full object-cover">
+                                </div>
                             </div>
                         </div>
                     </header>    
@@ -224,6 +232,57 @@
             window.addEventListener('resize', function () {
                 if (window.innerWidth >= 768 && !mobileMenu.classList.contains('hidden')) {
                     closeMobileMenu();
+                }
+            });
+            
+            // Sidebar Toggle for Mobile
+            const sidebar = document.getElementById('sidebar');
+            const sidebarToggle = document.getElementById('sidebarToggle');
+
+            function toggleSidebar() {
+                const isHidden = sidebar.classList.contains('hidden');
+                if (isHidden) {
+                    // Show sidebar without dark overlay
+                    sidebar.classList.remove('hidden');
+                    // allow slide-in
+                    sidebar.classList.remove('-translate-x-full');
+                } else {
+                    // Hide sidebar
+                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.add('hidden');
+                }
+            }
+
+            if (sidebarToggle) {
+                sidebarToggle.addEventListener('click', toggleSidebar);
+            }
+
+            // Ensure overlay click only closes the mobile menu, not toggle the sidebar
+            if (mobileMenuOverlay) {
+                mobileMenuOverlay.addEventListener('click', function() {
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        closeMobileMenu();
+                    }
+                });
+            }
+
+            // Close sidebar when clicking outside on mobile
+            document.addEventListener('click', function(event) {
+                if (window.innerWidth < 768 && !sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+                    if (!sidebar.classList.contains('hidden')) {
+                        toggleSidebar();
+                    }
+                }
+            });
+
+            // Handle window resize
+            window.addEventListener('resize', function() {
+                if (window.innerWidth >= 768) {
+                    sidebar.classList.remove('hidden');
+                    sidebar.classList.remove('-translate-x-full');
+                } else {
+                    sidebar.classList.add('hidden');
+                    sidebar.classList.add('-translate-x-full');
                 }
             });
         });
