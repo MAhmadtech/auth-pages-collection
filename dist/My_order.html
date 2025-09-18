@@ -17,26 +17,32 @@
     <div class="flex flex-col md:flex-row min-h-screen w-full bg-[#FFFCF5]">
 
       <!-- Sidebar -->
-      <aside class="sidebar hidden md:block w-48 h-screen fixed left-0 top-0 bg-[#FFFCF5] shadow-md flex-col p-4">
-        <div class="flex items-center mb-8">
-          <img src="/assets/logo.svg" alt="logo-icon" class="w-7 h-7 mr-2">
-          <span class="font-inter font-bold text-lg text-primary uppercase">Logo Here</span>
+      <div id="sidebar" class="fixed lg:w-64 md:w-54 h-full bg-[#FFFCF5] shadow-md transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-10 overflow-y-auto">
+        <div class="p-4">
+            <div class="flex items-center mb-8">
+                <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                <span class="text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo Here</span>
+            </div>
+            <nav class="space-y-2">
+                <button class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                    <img src="/Cart assets/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
+                    <span class="text-teal-900 text-sm font-medium">Products</span>
+                </button>
+                <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <img src="/Cart assets/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                    <span class="text-gray-800 text-sm font-medium">My Order</span>
+                </button>
+                <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <img src="/Cart assets/headphone.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                    <span class="text-gray-800 text-sm font-medium">AI Support</span>
+                </button>
+                <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                    <img src="/Cart assets/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
+                    <span class="text-gray-800 text-sm font-medium">Settings</span>
+                </button>
+            </nav>
         </div>
-        <nav class="space-y-2">
-          <a href="#" class="flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-            <img src="/assets/products.svg" alt="Products Icon" class="w-4 h-4 mr-3">
-            <span class="text-sm font-medium text-primary">Products</span>
-          </a>
-          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <img src="/assets/my order.svg" alt="My Order Icon" class="w-4 h-4 mr-3">
-            <span class="text-sm font-medium text-gray-800">My Order</span>
-          </a>
-          <a href="#" class="flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-            <img src="/assets/setting.svg" alt="Setting Icon" class="w-4 h-4 mr-3">
-            <span class="text-sm font-medium text-gray-800">Setting</span>
-          </a>
-        </nav>
-      </aside>
+    </div>
 
       <!-- Mobile Header -->
       <div class="flex items-center justify-between p-4 bg-[#FFFCF5] md:hidden">
@@ -79,15 +85,20 @@
               <span class="text-base font-medium text-gray-800">My Order</span>
             </a>
             <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors">
+              <img src="/Cart assets/headphone.svg" alt="AI Support Icon" class="w-5 h-5 mr-3">
+              <span class="text-base font-medium text-gray-800">AI Support</span>
+            </a>
+            <a href="#" class="flex items-center px-4 py-3 hover:bg-gray-100 rounded-lg transition-colors">
               <img src="/assets/setting.svg" alt="Setting Icon" class="w-5 h-5 mr-3">
               <span class="text-base font-medium text-gray-800">Setting</span>
             </a>
+
           </nav>
         </div>
       </div>
 
       <!-- Main Content -->
-      <main class="flex-1 flex flex-col bg-[#FBFBFC] min-h-screen md:ml-48">
+      <main class="flex-1 flex flex-col bg-[#FBFBFC] min-h-screen md:ml-44 lg:ml-64">
         <div class="flex-1 flex flex-col p-3 md:p-6 lg:p-8 overflow-hidden">
           <header class="flex-none">
             <div class="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-2 md:gap-4 mb-3 md:mb-6">

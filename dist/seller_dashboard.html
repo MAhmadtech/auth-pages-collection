@@ -12,38 +12,35 @@
 
 <body class="bg-zinc-50">
     <!-- Mobile Menu Button -->
-    <button id="menuToggle" class="md:hidden fixed top-3 right-4 z-50 p-2 bg-white rounded-md shadow-md">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <button id="menuToggle" class="md:hidden fixed top-2 right-4 z-20 p-2 rounded-md text-teal-900 bg-white shadow-md">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
         </svg>
     </button>
 
     <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
-        <div id="sidebar"
-            class="hidden md:block w-[11.25rem] lg:w-64 h-full bg-[#FFFCF5] shadow-md transform -translate-x-full md:translate-x-0 transition-transform duration-300 fixed z-40">
-            <div class="p-6">
+        <div id="sidebar" class="fixed lg:w-64 md:w-54 h-full bg-[#FFFCF5] shadow-md transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-10 overflow-y-auto">
+            <div class="p-4">
                 <div class="flex items-center mb-8">
-                    <img src="/Buyer Dashboard images/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                    <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
                     <span class="text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo Here</span>
                 </div>
                 <nav class="space-y-2">
-                    <a href="products.html" class="w-full">
-                        <button class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            <img src="/Buyer Dashboard images/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
-                            <span class="text-teal-900 text-sm font-medium">Products</span>
-                        </button>
-                    </a>
+                    <button class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                        <img src="/Cart assets/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
+                        <span class="text-teal-900 text-sm font-medium">Products</span>
+                    </button>
                     <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-                        <img src="/Buyer Dashboard images/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                        <img src="/Cart assets/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
                         <span class="text-gray-800 text-sm font-medium">My Order</span>
                     </button>
                     <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-                        <img src="/Buyer Dashboard images/headphone.svg" alt="AI Support" class="w-4 h-4 mr-3">
+                        <img src="/Cart assets/headphone.svg" alt="My Orders" class="w-4 h-4 mr-3">
                         <span class="text-gray-800 text-sm font-medium">AI Support</span>
                     </button>
                     <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-                        <img src="/Buyer Dashboard images/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
+                        <img src="/Cart assets/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
                         <span class="text-gray-800 text-sm font-medium">Settings</span>
                     </button>
                 </nav>
@@ -74,7 +71,7 @@
                             <button class="right-8 md:block md:right-1 p-2 rounded-full hover:bg-gray-100 relative">
                                 <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z">
+                                        d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
                                     </path>
                                 </svg>
                                 <!-- Cart Count Badge -->
@@ -176,33 +173,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">John Smith</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-zinc-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -218,33 +200,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Robert Fox</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-zinc-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -260,33 +227,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Wade Warren</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-zinc-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -302,33 +254,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Guy Hawkins</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-zinc-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -345,33 +282,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Jane Cooper</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-zinc-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -387,33 +309,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Robert Fox</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-zinc-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -429,33 +336,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Jerome Bell</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -471,33 +363,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Floyd Miles</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -523,33 +400,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Jane Cooper</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -563,33 +425,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Robert Fox</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -603,33 +450,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Jerome Bell</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -643,33 +475,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Floyd Miles</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -694,33 +511,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Jane Cooper</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -734,33 +536,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Robert Fox</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -774,33 +561,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Jerome Bell</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -814,33 +586,18 @@
                             <div class="h-px bg-gray-200 my-2"></div>
                             <div class="flex justify-between items-center mb-3">
                                 <div class="flex items-center text-sm">
-                                    <span class="text-gray-500 mr-1">By:</span>
-                                    <span class="font-medium">Floyd Miles</span>
+                                    <span class="text-gray-500 mr-1">Category:</span>
+                                    <span class="font-medium">Non-Fiction</span>
                                 </div>
                                 <div class="flex items-center">
-                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
-                                    <div class="flex">
-                                        <!-- Star icons -->
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
-                                    </div>
+                                    <span class="text-sm text-gray-500 mr-1">Date:</span>
+                                    <span class="text-sm text-gray-700 font-bold">12, July, 2025</span>
                                 </div>
                             </div>
                             <div class="flex space-x-2">
                                 <button
                                     class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
                                     View Detail
-                                </button>
-                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
-                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
-                                        </path>
-                                    </svg>
                                 </button>
                             </div>
                         </div>
@@ -883,14 +640,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('menuToggle').addEventListener('click', function () {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-            sidebar.classList.toggle('translate-x-0');
-        });
-    </script>
-    <script>
         // Toggle dropdown on button click
         const dropdownButton = document.getElementById('categoryDropdown');
         const dropdownMenu = document.getElementById('dropdownMenu');
@@ -925,6 +674,56 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        (function () {
+            const toggleBtn = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+
+            if (!toggleBtn || !sidebar) return;
+
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+            }
+
+            function isMobile() {
+                return window.innerWidth < 768; // md breakpoint
+            }
+
+            toggleBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (sidebar.classList.contains('-translate-x-full')) {
+                    openSidebar();
+                } else {
+                    closeSidebar();
+                }
+            });
+
+            // Close when clicking outside on mobile
+            document.addEventListener('click', function (e) {
+                if (!isMobile()) return;
+                if (!sidebar.contains(e.target) && e.target !== toggleBtn) {
+                    closeSidebar();
+                }
+            });
+
+            // Ensure correct state on resize
+            window.addEventListener('resize', function () {
+                if (!isMobile()) {
+                    // Keep sidebar visible on md+
+                    sidebar.classList.remove('-translate-x-full');
+                } else {
+                    // Hide by default on mobile
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        })();
     </script>
 </body>
 

@@ -20,26 +20,27 @@
 
     <div class="flex h-screen overflow-hidden">
         <!-- Sidebar -->
-        <div id="sidebar"
-            class="hidden md:block w-[11.25rem] lg:w-64 h-full bg-[#FFFCF5] shadow-md transform -translate-x-full md:translate-x-0 transition-transform duration-300 fixed z-40">
-            <div class="p-6">
+        <div id="sidebar" class="fixed lg:w-64 md:w-54 h-full bg-[#FFFCF5] shadow-md transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-10 overflow-y-auto">
+            <div class="p-4">
                 <div class="flex items-center mb-8">
-                    <img src="/Buyer Dashboard images/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                    <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
                     <span class="text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo Here</span>
                 </div>
                 <nav class="space-y-2">
-                    <a href="products.html" class="w-full">
-                        <button class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
-                            <img src="/Buyer Dashboard images/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
-                            <span class="text-teal-900 text-sm font-medium">Products</span>
-                        </button>
-                    </a>
+                    <button class="w-full flex items-center px-3 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition-colors">
+                        <img src="/Cart assets/3d-square.svg" alt="Products" class="w-4 h-4 mr-3">
+                        <span class="text-teal-900 text-sm font-medium">Products</span>
+                    </button>
                     <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-                        <img src="/Buyer Dashboard images/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                        <img src="/Cart assets/element-4.svg" alt="My Orders" class="w-4 h-4 mr-3">
                         <span class="text-gray-800 text-sm font-medium">My Order</span>
                     </button>
                     <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
-                        <img src="/Buyer Dashboard images/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
+                        <img src="/Cart assets/headphone.svg" alt="My Orders" class="w-4 h-4 mr-3">
+                        <span class="text-gray-800 text-sm font-medium">AI Support</span>
+                    </button>
+                    <button class="w-full flex items-center px-3 py-2 hover:bg-gray-100 rounded-lg transition-colors">
+                        <img src="/Cart assets/setting-2.svg" alt="Settings" class="w-4 h-4 mr-3">
                         <span class="text-gray-800 text-sm font-medium">Settings</span>
                     </button>
                 </nav>
@@ -874,14 +875,6 @@
     </div>
 
     <script>
-        // Mobile menu toggle
-        document.getElementById('menuToggle').addEventListener('click', function () {
-            const sidebar = document.getElementById('sidebar');
-            sidebar.classList.toggle('hidden');
-            sidebar.classList.toggle('translate-x-0');
-        });
-    </script>
-    <script>
         // Toggle dropdown on button click
         const dropdownButton = document.getElementById('categoryDropdown');
         const dropdownMenu = document.getElementById('dropdownMenu');
@@ -916,6 +909,56 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        // Mobile menu toggle
+        (function () {
+            const toggleBtn = document.getElementById('menuToggle');
+            const sidebar = document.getElementById('sidebar');
+
+            if (!toggleBtn || !sidebar) return;
+
+            function openSidebar() {
+                sidebar.classList.remove('-translate-x-full');
+            }
+
+            function closeSidebar() {
+                sidebar.classList.add('-translate-x-full');
+            }
+
+            function isMobile() {
+                return window.innerWidth < 768; // md breakpoint
+            }
+
+            toggleBtn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                if (sidebar.classList.contains('-translate-x-full')) {
+                    openSidebar();
+                } else {
+                    closeSidebar();
+                }
+            });
+
+            // Close when clicking outside on mobile
+            document.addEventListener('click', function (e) {
+                if (!isMobile()) return;
+                if (!sidebar.contains(e.target) && e.target !== toggleBtn) {
+                    closeSidebar();
+                }
+            });
+
+            // Ensure correct state on resize
+            window.addEventListener('resize', function () {
+                if (!isMobile()) {
+                    // Keep sidebar visible on md+
+                    sidebar.classList.remove('-translate-x-full');
+                } else {
+                    // Hide by default on mobile
+                    sidebar.classList.add('-translate-x-full');
+                }
+            });
+        })();
     </script>
 </body>
 
