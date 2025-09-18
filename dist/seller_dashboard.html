@@ -48,7 +48,7 @@
         </div>
 
         <!-- Main Content -->
-        <div class="flex-1 flex flex-col overflow-hidden md:ml-[11.25rem] lg:ml-64">
+        <div class="flex-1 flex flex-col overflow-hidden md:ml-54 lg:ml-64">
             <!-- Top Navigation -->
             <header class="bg-zinc-50 shadow-sm">
                 <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
@@ -126,9 +126,22 @@
                                 </svg>
                             </button>
                         </div>
-                        <button class="w-32 h-10 rounded-[5px] border-[0.80px] border-gray-400 hover:bg-gray-100">
-                            <span class="text-center text-neutral-700 text-sm font-normal font-['Poppins']">Add New</span>
-                        </button>
+                        <div class="relative">
+                            <button type="button" id="addNewButton" aria-haspopup="true" aria-expanded="false"
+                                class="w-32 h-10 rounded-[5px] border-[0.80px] border-gray-400 hover:bg-gray-100 inline-flex items-center justify-center gap-2">
+                                <span class="text-center text-neutral-700 text-sm font-normal font-['Poppins']">Add New</span>
+                                <svg class="h-4 w-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </button>
+                            <div id="addNewMenu" class="hidden absolute right-0 mt-2 w-44 rounded-md shadow-lg bg-white ring-1 ring-black/5 z-20" role="menu" aria-orientation="vertical" aria-labelledby="addNewButton">
+                                <div class="py-1" role="none">
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Book</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Courses</a>
+                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Webinar</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
 
                     <!-- Dropdown menu -->
@@ -674,6 +687,38 @@
                 }
             });
         });
+    </script>
+
+    <script>
+        // "Add New" dropdown toggle and interactions
+        (function () {
+            const addNewButton = document.getElementById('addNewButton');
+            const addNewMenu = document.getElementById('addNewMenu');
+            if (!addNewButton || !addNewMenu) return;
+
+            addNewButton.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isExpanded = this.getAttribute('aria-expanded') === 'true';
+                this.setAttribute('aria-expanded', String(!isExpanded));
+                addNewMenu.classList.toggle('hidden');
+            });
+
+            // Close on click outside
+            document.addEventListener('click', function (e) {
+                if (!addNewButton.contains(e.target) && !addNewMenu.contains(e.target)) {
+                    addNewButton.setAttribute('aria-expanded', 'false');
+                    addNewMenu.classList.add('hidden');
+                }
+            });
+
+            // Close when selecting a menu item
+            addNewMenu.querySelectorAll('a').forEach(item => {
+                item.addEventListener('click', function () {
+                    addNewButton.setAttribute('aria-expanded', 'false');
+                    addNewMenu.classList.add('hidden');
+                });
+            });
+        })();
     </script>
 
     <script>
