@@ -1,0 +1,914 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="/output.css" rel="stylesheet">
+    <title>Landing Page</title>
+</head>
+<style>
+    /* Add smooth transitions */
+#mobileMenu {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Prevent body scroll when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+    </style>
+<body class="bg-zinc-50">
+
+
+    <div class="flex flex-col min-h-screen">
+
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden md:ml-2 lg:ml-2">
+            <!-- Top Navigation -->
+            <header class="bg-zinc-50 shadow-sm relative">
+                <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center">
+                            <div class="p-4">
+                                <div class="flex items-center">
+                                    <img src="/Cart assets/Logo (1).svg" alt="Logo" class="w-7 h-7 mr-2">
+                                    <span class="text-teal-900 text-lg font-bold font-['Inter'] uppercase">Logo
+                                        Here</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Mobile Sidebar Menu (hidden by default) -->
+                        <div id="mobileMenu"
+                            class="fixed inset-y-0 right-0 w-64 bg-white shadow-lg transform translate-x-full md:translate-x-0 md:hidden transition-transform duration-300 ease-in-out z-50">
+                            <div class="p-4">
+                                <div class="flex justify-between items-center mb-8">
+                                    <span class="text-teal-900 text-lg font-bold">Menu</span>
+                                    <button id="closeMobileMenu" class="p-2 hover:bg-gray-100 rounded-full">
+                                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M6 18L18 6M6 6l12 12"></path>
+                                        </svg>
+                                    </button>
+                                </div>
+                                <nav class="space-y-2">
+                                    <a href="login.html"
+                                        class="block px-4 py-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors">
+                                        Login
+                                    </a>
+                                    <a href="signup.html"
+                                        class="block px-4 py-3 bg-teal-900 text-white rounded-lg hover:bg-teal-800 transition-colors">
+                                        Sign Up
+                                    </a>
+                                </nav>
+                            </div>
+                        </div>
+
+                        <!-- Mobile Menu Toggle Button -->
+                        <div class="flex items-center md:hidden">
+                            <button id="mobileMenuToggle" class="p-2 rounded-md hover:bg-gray-100 focus:outline-none">
+                                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M4 6h16M4 12h16m-7 6h7"></path>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <!-- Mobile Menu (hidden by default) -->
+                        <div id="mobileMenu"
+                            class="hidden md:hidden absolute top-24 right-4 w-48 bg-white rounded-md shadow-lg py-1 z-50">
+                            <a href="login.html"
+                                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Login</a>
+                            <a href="signup.html" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign
+                                Up</a>
+                        </div>
+
+                        <!-- Desktop Buttons (hidden on mobile) -->
+                        <div class="hidden md:flex space-x-4">
+                            <a href="login.html"
+                                class="px-8 py-2 text-teal-900 border rounded-lg hover:text-teal-700">Login</a>
+                            <a href="signup.html"
+                                class="px-6 py-2 bg-teal-900 text-white rounded-lg hover:bg-teal-800">Sign Up</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- After the header -->
+            <div class="flex flex-col items-center justify-center py-12 px-4 text-center">
+                <div class="max-w-4xl mx-auto">
+                    <h1
+                        class="text-4xl md:text-4xl lg:text-5xl font-extrabold text-black font-['Urbanist'] leading-tight mb-6">
+                        Lorem Ipsum is simply dummy text of the printing and type setting
+                    </h1>
+                    <p
+                        class="text-lg md:text-xl text-neutral-500 font-medium font-['Urbanist'] leading-loose mb-8 max-w-3xl mx-auto">
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+                        the industry's standard dummy text ever since the 1500s.
+                    </p>
+                    <button
+                        class="px-8 py-3 bg-teal-900 text-white rounded-lg shadow-md hover:bg-teal-800 transition-colors text-sm font-normal font-['Poppins']"
+                        type="button">
+                        Sign up
+                    </button>
+                </div>
+            </div>
+
+
+            <!-- Main Content Area -->
+            <main class="flex-1 overflow-y-auto p-4 md:p-6">
+                <!-- Category Filter -->
+                <div class="mb-6 relative inline-block text-left">
+
+                </div>
+
+                <!-- Products Grid -->
+                <div class="w-full px-1 sm:px-1 lg:px-1 max-w-8xl mx-auto">
+                    <div class="flex justify-between items-center">
+                        <h2 class="text-teal-900 text-2xl font-bold font-['Urbanist'] leading-loose">Books</h2>
+
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+
+                    <!-- Product Card 1 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 1.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">The Conscious Machine</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">John Smith</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 2 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 3.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">The Quantum Brain </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Robert Fox</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 3 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 2.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Deep Learning Unlocked</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Wade Warren</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 4 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 4.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">AI In The 21st Century</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Guy Hawkins</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 5 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Buyer Dashboard images/image 2.png" alt="Product"
+                                class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">The Algorithmic Revolution</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Jane Cooper</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 6 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 6.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Building The Next AI</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Robert Fox</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 7 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 7.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Exploring The AI Universe</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Jerome Bell</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product Card 8 -->
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 8.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Decoding The Machine Mind</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Floyd Miles</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- webinar -->
+                <!-- Products Grid -->
+                <div class="w-full px-1 sm:px-1 lg:px-1 max-w-8xl mx-auto">
+                    <div class="flex justify-between items-center mt-12">
+                        <h2 class="text-teal-900 text-2xl font-bold font-['Urbanist'] leading-loose">Webinar</h2>
+
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 5.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">The Algorithmic Revolution </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Jane Cooper</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 6.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Building The Next AI </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Robert Fox</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 7.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Exploring The AI Universe </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Jerome Bell</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 8.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Decoding The Machine Mind </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Floyd Miles</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- courses -->
+                <div class="w-full px-1 sm:px-1 lg:px-1 max-w-8xl mx-auto">
+                    <div class="flex justify-between items-center mt-12">
+                        <h2 class="text-teal-900 text-2xl font-bold font-['Urbanist'] leading-loose">Courses</h2>
+
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 5.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">The Algorithmic Revolution </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Jane Cooper</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 6.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Building The Next AI </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Robert Fox</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 7.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Exploring The AI Universe</h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Jerome Bell</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
+                        <div class="h-48 w-full">
+                            <img src="/Dashboard(1)/image 8.png" alt="Product" class="w-full h-full object-cover">
+                        </div>
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-gray-800 mb-2">Decoding The Machine Mind </h3>
+                            <div class="h-px bg-gray-200 my-2"></div>
+                            <div class="flex justify-between items-center mb-3">
+                                <div class="flex items-center text-sm">
+                                    <span class="text-gray-500 mr-1">By:</span>
+                                    <span class="font-medium">Floyd Miles</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <span class="text-sm text-gray-500 mr-1">4.5</span>
+                                    <div class="flex">
+                                        <!-- Star icons -->
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                        <img src="/Buyer Dashboard images/Star 5.svg" alt="star" class="w-4 h-4">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <button
+                                    class="flex-1 py-2 text-sm border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    View Detail
+                                </button>
+                                <button class="p-2 border border-gray-300 rounded hover:bg-gray-50 transition-colors">
+                                    <svg class="w-5 h-5 text-gray-500" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                            d="M3 3h2l.4 2m13.6 0l-1.5 7.5M7 13h10l1-5H5.5m-.5 8a2 2 0 100 4 2 2 0 000-4zm12 0a2 2 0 100 4 2 2 0 000-4z">
+                                        </path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+
+            <!-- Footer -->
+            <footer class="bg-zinc-50 py-4">
+                <div class="max-w-8xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <div class="text-sm text-gray-500">Copyright 2025 book.com</div>
+                        <div class="flex space-x-6 mt-4 md:mt-0">
+                            <a href="#" class="text-gray-400 hover:text-gray-500">Privacy Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">Terms</a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">Contact</a>
+                        </div>
+                        <div class="flex space-x-4 mt-4 md:mt-0">
+                            <!-- Social Icons -->
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <img src="/Buyer Dashboard images/FacebookLogo.svg" alt="Facebook" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <img src="/Buyer Dashboard images/TwitterLogo.svg" alt="Twitter" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <img src="/Buyer Dashboard images/InstagramLogo.svg" alt="Instagram" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <img src="/Buyer Dashboard images/YoutubeLogo.svg" alt="YouTube" class="w-5 h-5">
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-gray-500">
+                                <img src="/Buyer Dashboard images/TwitterLogo.svg" alt="Twitter" class="w-5 h-5">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuButton = document.getElementById('mobileMenuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileMenuOverlay = document.getElementById('mobileMenuOverlay');
+        const closeMobileMenu = document.getElementById('closeMobileMenu');
+
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        mobileMenuButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            openMobileMenu();
+        });
+
+        closeMobileMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenuFunc();
+        });
+
+        mobileMenuOverlay.addEventListener('click', (e) => {
+            e.stopPropagation();
+            closeMobileMenuFunc();
+        });
+
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuButton.contains(e.target) && !mobileMenu.contains(e.target)) {
+                closeMobileMenuFunc();
+            }
+        });
+
+        // Close menu when pressing Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeMobileMenuFunc();
+            }
+        });
+    </script>
+    <script>
+        function openMobileMenu() {
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenuOverlay.classList.remove('hidden');
+            document.body.classList.add('menu-open');
+        }
+
+        function closeMobileMenuFunc() {
+            mobileMenu.classList.add('translate-x-full');
+            mobileMenuOverlay.classList.add('hidden');
+            document.body.classList.remove('menu-open');
+        }
+    </script>
+
+
+
+</body>
+
+</html>
