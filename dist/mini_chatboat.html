@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link href="/output.css" rel="stylesheet">
+    <title>Mini Chatbot</title>
+</head>
+
+<body>
+    <div>
+        <div>
+            <div
+                class="w-[491px] h-[600px] bg-neutral-100 rounded-tl-xl rounded-tr-xl shadow-[0px_3px_20px_6px_rgba(0,0,0,0.10)] flex flex-col">
+                <!-- Header -->
+                <div class="flex items-center justify-between p-4">
+                    <div class="justify-start text-teal-900 text-xl font-extrabold font-['Urbanist'] leading-7">Help
+                        Center
+                    </div>
+                    <div class="w-5 h-5 flex items-center justify-center opacity-50 cursor-pointer">
+                        <img src="/Cart assets/Frame.svg" alt="Frame">
+                    </div>
+                </div>
+                <div class="border-b-[0.50px] border-neutral-600"></div>
+
+                <!-- Messages Area -->
+                <div class="flex-1 overflow-y-auto p-4">
+                    <div class="mt-8 ml-44">
+                        <div class="w-68 h-10 bg-[#FFFCF5] rounded-xl">
+                            <div
+                                class="ml-1 text-center pt-1.5 text-text-main-[message] text-lg font-medium font-['Urbanist']">
+                                Hello! How Can i help you today?</div>
+                        </div>
+                    </div>
+                    <div class="mt-8 ml-2">
+                        <div class="w-68 h-10 bg-blue-100 rounded-xl">
+                            <div
+                                class="ml-1 text-center pt-1.5 text-text-main-[message] text-lg font-medium font-['Urbanist']">
+                                Hello! How Can i help you today?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="mt-auto">
+                    <div
+                        class="w-full p-3.5 bg-bg-[footer] rounded-bl-2xl rounded-br-2xl shadow-[0px_-3.306666612625122px_13.226666450500488px_0px_rgba(0,0,0,0.08)] flex flex-col justify-start items-start gap-[4.96px]">
+                        
+                        <div
+                            class="self-stretch px-5 py-4 bg-gray-200 rounded-xl shadow-[inset_0px_1.653333306312561px_3.306666612625122px_0px_rgba(0,0,0,0.12)] flex justify-between items-center overflow-hidden">
+                            <input type="text" placeholder="Type your message here..." class="flex-1 bg-transparent text-text-main-[message] text-base font-normal font-['Urbanist'] outline-none border-none">
+                            <button class="w-5 h-5 relative flex-shrink-0 cursor-pointer">
+                                <img src="/Cart assets/send.svg" alt="send">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
